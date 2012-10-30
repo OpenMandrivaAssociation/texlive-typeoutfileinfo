@@ -1,12 +1,12 @@
-# revision 26313
+# revision 27846
 # category Package
 # catalog-ctan /support/typeoutfileinfo
-# catalog-date 2012-03-16 14:12:34 +0100
+# catalog-date 2012-09-28 15:59:23 +0200
 # catalog-license lppl1.3
-# catalog-version 0.1a
+# catalog-version 0.31
 Name:		texlive-typeoutfileinfo
-Version:	0.1a
-Release:	2
+Version:	0.31
+Release:	1
 Summary:	Display class/package/file information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/typeoutfileinfo
