@@ -1,12 +1,12 @@
-# revision 27846
+# revision 26313
 # category Package
 # catalog-ctan /support/typeoutfileinfo
-# catalog-date 2012-09-28 15:59:23 +0200
+# catalog-date 2012-03-16 14:12:34 +0100
 # catalog-license lppl1.3
-# catalog-version 0.31
+# catalog-version 0.1a
 Name:		texlive-typeoutfileinfo
-Version:	0.31
-Release:	1
+Version:	0.1a
+Release:	2
 Summary:	Display class/package/file information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/typeoutfileinfo
@@ -53,3 +53,15 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1a-2
++ Revision: 813134
+- Update to latest release.
+
+* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1a-1
++ Revision: 787811
+- Import texlive-typeoutfileinfo
+- Import texlive-typeoutfileinfo
+
