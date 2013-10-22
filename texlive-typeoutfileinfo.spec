@@ -6,7 +6,7 @@
 # catalog-version 0.31
 Name:		texlive-typeoutfileinfo
 Version:	0.31
-Release:	1
+Release:	2
 Summary:	Display class/package/file information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/typeoutfileinfo
@@ -49,7 +49,7 @@ package is available.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdir}/scripts/typeoutfileinfo/typeoutfileinfo.sh typeoutfileinfo
+    ln -sf %{_texmfdistdir}/scripts/typeoutfileinfo/typeoutfileinfo.sh typeoutfileinfo
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
