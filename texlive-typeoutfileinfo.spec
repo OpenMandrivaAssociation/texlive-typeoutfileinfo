@@ -6,7 +6,7 @@
 # catalog-version 0.31
 Name:		texlive-typeoutfileinfo
 Version:	0.31
-Release:	8
+Release:	9
 Summary:	Display class/package/file information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/typeoutfileinfo
