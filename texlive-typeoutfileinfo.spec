@@ -1,6 +1,6 @@
 Name:		texlive-typeoutfileinfo
-Version:	29349
-Release:	2
+Version:	67526
+Release:	1
 Summary:	Display class/package/file information
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/typeoutfileinfo
