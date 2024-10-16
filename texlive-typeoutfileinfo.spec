@@ -3,7 +3,7 @@ Version:	67526
 Release:	1
 Summary:	Display class/package/file information
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/typeoutfileinfo
+URL:		https://www.ctan.org/tex-archive/support/typeoutfileinfo
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typeoutfileinfo.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typeoutfileinfo.doc.r%{version}.tar.xz
