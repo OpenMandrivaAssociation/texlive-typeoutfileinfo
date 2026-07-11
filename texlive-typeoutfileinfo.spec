@@ -1,49 +1,25 @@
-Name:		texlive-typeoutfileinfo
-Version:	67526
-Release:	1
+%global tl_name typeoutfileinfo
+%global tl_revision 67526
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.32
+Release:	%{tl_revision}.1
 Summary:	Display class/package/file information
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/support/typeoutfileinfo
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typeoutfileinfo.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typeoutfileinfo.doc.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/typeoutfileinfo.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/typeoutfileinfo.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
-Provides:	texlive-typeoutfileinfo.bin = %{EVRD}
+BuildSystem:	texlive
+Requires:	texlive(fileinfo)
+Requires:	texlive(typeoutfileinfo.bin)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides a minimalist shell script, for Unix
-systems, that displays the information content in a
-\ProvidesFile, \ProvidesPackage or \ProvidesClass command in a
-LaTeX source file. The package requires that the readprov
-package is available.
+The package provides a minimalist shell script, for Unix systems, that
+displays the information content in a \ProvidesFile, \ProvidesPackage or
+\ProvidesClass command in a LaTeX source file. The package requires that
+the readprov package is available.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_bindir}/typeoutfileinfo
-%{_texmfdistdir}/scripts/typeoutfileinfo/typeoutfileinfo.sh
-%doc %{_texmfdistdir}/doc/support/typeoutfileinfo/README
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_bindir}
-pushd %{buildroot}%{_bindir}
-ln -sf %{_texmfdistdir}/scripts/typeoutfileinfo/typeoutfileinfo.sh typeoutfileinfo
-popd
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf-dist %{buildroot}%{_datadir}
