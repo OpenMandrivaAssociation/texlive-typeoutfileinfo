@@ -1,5 +1,6 @@
 %global tl_name typeoutfileinfo
 %global tl_revision 67526
+%global tl_bin_links typeoutfileinfo:%{_texmfdistdir}/scripts/typeoutfileinfo/typeoutfileinfo.sh
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildSystem:	texlive
 Requires:	texlive(fileinfo)
 Requires:	texlive(typeoutfileinfo.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 The package provides a minimalist shell script, for Unix systems, that
